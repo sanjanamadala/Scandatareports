@@ -1,0 +1,242 @@
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<router-outlet></router-outlet>
+<ng-flash-message></ng-flash-message>
+<!-- Navbar (sit on top) -->
+
+
+
+
+
+
+<div class="w3-top  navbar-inverse">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Weekly</b> List</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <!--<div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Submit Report via FTP</a>
+        <a href="#about" class="w3-bar-item w3-button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;"  >Test Report via FTP
+</a>
+      <a href="#contact" class="w3-bar-item w3-button" (click)="filedatas()" >Download File</a>
+    </div> -->
+  </div>
+</div>
+<br>
+
+
+<!-- Header
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="/w3images/architect.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">Architects</span></h1>
+  </div>
+</header>-->
+<div class="container" style="margin-top:1%;">
+<h1>Store Information </h1>
+<!-- The Modal -->
+<div class="row" style="margin-left:2%;" >
+  <div class="col-75">
+    <div class="container">
+      <form name="validform" action="/action_page.php">
+
+        <div class="row">
+
+          <div class="col-50">
+            <label for="fname"> Store Name</label>
+            <input type="text" id="" name="firstname" value={{name}} placeholder="Store name ">
+
+            <label for="email">Street</label>
+            <input type="text" id="email" value={{address}} name="email" placeholder="Street no">
+            <label for="state">State</label>
+            <input type="text" id="state"value={{state}}   name="state" placeholder="NY">
+
+          </div>
+
+          <div class="col-50">
+            <label for="fname"> Accoount No</label>
+            <input type="text" id="fname"  name="firstname" placeholder="Account No ">
+            <label for="adr">City</label>
+
+            <input type="text" id="city"  value={{city}}  name="city" placeholder="City">
+            <label for="zip">Zip</label>
+            <input type="text" id="zip" value={{zip}}  name="zip" placeholder="10001">
+          </div>
+<div  id="load" class="loading">Loading&#8230;Just Wait A Movement</div>
+<div id="p">
+  <p align="center">Just Wait A Movement</p></div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+<div class="col-25">
+  </div>
+</div>
+
+
+<div  style="">
+  <h1>Stores & Departments</h1>
+
+
+  <div id="alerts" class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Success!</strong> Reropt transfered successfully....
+  </div>
+  <div id="alertss" class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Worn!</strong> Some Thing Went Wrong..
+  </div>
+    <label></label>
+    <select (change)="test($event.target.value)" class="text-line"   style="margin-left:6%;">
+        <option value="0"> Select Catagory</option>
+        <option *ngFor="let summary of categorys" value={{summary.name}} >
+            {{summary.name}}
+        </option>
+    </select>
+</div>
+<br>
+<h1>Schedule and Report Options</h1>
+<div class="row" style="margin-left:2%;" >
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+        <label for="uname"><b>Week Day to submit Report </b></label>
+        <input type="checkbox" checked="checked" name="sameadr"> Monday
+        <hr style="color:#3f3f3f">
+        <label for="uname"><b>Data Range </b></label>
+        <select (change)="catid($event.target.value)" class="text-line"  id="myBtn" >
+            <option value="0"> Last Week Sun-Sat</option>
+
+        </select>        <hr style="color:#3f3f3f">
+        <div class="row">
+          <div class="col-50">
+<h3 style="font-weight:bold;font-size: 1em;"> Provide Ftp Details</h3>
+            <label for="uname"><b>Server/Host</b></label>
+            <input type="text" value="dlptest.com" name="hostname"   id="hostname"   >
+
+            <label for="psw"><b>UserName</b></label>
+            <input type="text" value="dlpuser@dlptest.com" name="user"   id="user" >
+            <label for="psw"><b>Password</b></label>
+            <input type="password" value="5p2tvn92R0di8FdiLCfzeeT0b" name="password" id="password"   >
+          </div>
+
+          <div class="col-50">
+
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+<div   id="sna">No Sale Yet....</div>
+
+<div id="snackbar">Report transfered Successfully...</div>
+<div class="snackbars" id="snackbars">Some thing went wrong..</div>
+<div id="valid">Enter Account Number</div>
+
+<div id="button-group">
+<button class="text-line button-group"  id="buttons" (click)="shift()" style="width:auto;">Submit Report via FTP</button> &nbsp;
+<button class="text-line button-group"    id="buttons"(click)="shift()" style="width:auto;"  >Test Report via FTP</button>&nbsp;
+
+<button  class="text-line button-group"  id="d" (click)="file()" style="width:auto;"  >Download File</button> &nbsp;
+<button  class="text-line button-group" (click)="valid()" style="width:auto;"  >View Report</button>
+
+</div>
+<div id="id01" class="modal">
+        <form   id="su" class="modal-content animate" #sata = "ngForm"  (ngSubmit) = "sata.form.valid && shift()">
+
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <table  id="customers"class="responstable" width="100%" id="m2"  style=" ">
+                  <thead class="black table-header white-text" >
+
+
+
+                  <th> clientCreatedTime</th>
+
+                  <th> LineItems </th>
+                  <th>vendor</th>
+
+                  <th> Total Amount </th>
+                  <th > order id</th>
+      <th>Discount amount</th>
+      <th>No of items</th>
+
+                  </thead>
+                  <tbody>
+                <tr  width="70%" *ngFor="let s of data">
+
+
+
+                <td>{{s.orderClientCreatedTime}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.vendor}}</td>
+
+                <td>{{s.price}}</td>
+                <td>{{s.orderid}}</td>
+                <td>{{s.discoint}}</td>
+                <td>{{s.noofitems}}</td>
+
+
+
+
+                    </tbody>
+                </table>  </div>
+
+
+  </form>
+</div>
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <table  id="customers"class="responstable" width="100%" id="m2"  style=" ">
+                <thead class="black table-header white-text" >
+
+
+
+                <th> clientCreatedTime</th>
+
+                <th> LineItems </th>
+                <th>vendor</th>
+
+                <th> Total Amount </th>
+                <th > order id</th>
+    <th>Discount amount</th>
+    <th>No of items</th>
+
+                </thead>
+                <tbody>
+              <tr  width="70%" *ngFor="let s of data">
+
+
+
+              <td>{{s.orderClientCreatedTime}}</td>
+              <td>{{s.name}}</td>
+              <td>{{s.vendor}}</td>
+
+              <td>{{s.price}}</td>
+              <td>{{s.orderid}}</td>
+              <td>{{s.discoint}}</td>
+              <td>{{s.noofitems}}</td>
+
+
+
+
+                  </tbody>
+              </table>  </div>
+
+</div>
