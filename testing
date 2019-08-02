@@ -1,0 +1,492 @@
+
+
+
+
+
+
+
+<body bgcolor="#E6E6FA" id="login-bg" >
+  <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#275261" >
+
+  <!-- Navbar brand -->
+  <div class="topnav-centered">
+    <a class="navbar-brand "style="text-align:center" href="#">Cash Back</a>
+  </div>
+  <!-- Collapse button -->
+
+</nav>
+<!--/.Navbar-->
+
+
+
+<div class="container">
+  <form class="form-inline">
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Employee</label>
+    <select (change)="selectChangeHandler($event.target.value)"  name="cat" id="employee" ngModel >
+        <option  *ngFor="let sec of d" value={{sec.employeeid}}-{{sec.employeename}} >
+            {{sec.employeename}}
+        </option>
+    </select>  &nbsp;  &nbsp;
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Counter Cash</label>
+    <input type="text" placeholder="$"name="cashin" id="abcd" ngModel/>
+&nbsp;  &nbsp;<!--
+<button (click)="root()"   id="lo" type="button"    value="START SHIFT"  >
+    START SHIFT</button>  -->&nbsp;&nbsp;
+    <button  type="button"  id="viewlog"  onclick="document.getElementById('id').style.display='block'"  style="width:auto;">View Logs</button>
+
+    <!--=============================== flash===================================-->
+
+
+
+  </form>
+<div class="container-main"    > <!-- id="sudheer"-->
+  <form id="MyForm">
+
+<form class="form-inline  " style="margin-left:27%" action="/action_page.php">
+<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Payment Type :</label>
+<select  id="c" (change)="tender()" name="cate"  ngModel>
+       <option value="0">TenderType</option>
+       <option *ngFor="let sec of heroes" value={{sec}} >
+           {{sec}}
+       </option>
+   </select> &nbsp; &nbsp; &nbsp;  <div class="w3-container w3-center w3-animate-zoom">
+     <p style="margin-top:10%">Sales Amount:  <strong> {{this.cu}} </strong></p>
+
+   </div>
+   <button   id="ss" type="button"  onclick="document.getElementById('Expensess').style.display='block'" style="width:28%;border-radius:10px;" >Count Total</button>
+   <!--<button class="btn danger" onclick="document.getElementById('details').style.display='block'" id="s" name="Click"  (click)="onSubmit()">END SHIFT</button>
+-->
+   </form>
+   <table  background=""  style=" solid black; width:90%;">
+       <tr>
+       <tr>
+           <td>
+             <label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_100+(2).png" width="100" height="42"></label> </td >
+             <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>
+             <td style="padding-left: 10%;">
+               <input type="text" oninput="myFunction100()" id="oneh" /> </td>
+                <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                           <td style="padding-left: 10%;"><input class="form-control" id="o" type="text" value=0 aria-label="Search" disabled>
+           </td>
+         </tr>
+       <tr>
+           <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_50.png" width="100" height="42">
+            </label> </td > <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>
+              <td style="padding-left: 10%;">
+             <input type="text" oninput="myFunction50()" id="fifty" /></td>
+           <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                         <td style="padding-left: 10%;"><input class="form-control" type="text" id="f" value={{twod}} aria-label="Search" disabled>
+       </tr>
+       <tr>
+           <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_20.png" width="100" height="42"> </label>
+           </td > <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>
+               <td style="padding-left: 10%;"><input type="text" oninput="myFunction20()" id="twenty" /></td>
+           <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                         <td style="padding-left: 10%;"><input class="form-control"  id="t" type="text" value={{threed}} aria-label="Search" disabled>
+       </tr>
+       <tr>
+           <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_10.png" width="100" height="42"></label> </td >
+             <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>  <td style="padding-left: 10%;"><input type="text" oninput="myFunction10()" id="ten" /></td>
+           <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                         <td style="padding-left: 10%;"><input class="form-control" type="text" id="te"  value={{fourd}} aria-label="Search" disabled>
+       </tr>
+       <tr>
+           <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_5.png" width="100" height="42"></label> </td >
+             <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>  <td style="padding-left: 10%;"><input type="text" oninput="myFunction5()" id="five" /></td>
+           <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                         <td style="padding-left: 10%;"><input class="form-control" type="text"  id="ff" value={{fived}} aria-label="Search" disabled >
+       </tr>
+       <tr>
+           <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_2.png" width="100" height="42"> </label> </td >
+             <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>  <td style="padding-left: 10%;"><input type="text" oninput="myFunction2()" id="two" /></td>
+           <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                         <td style="padding-left: 10%;"><input class="form-control" type="text" id="tw" value={{sixd}} aria-label="Search" disabled>
+       </tr>
+       <tr>
+           <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_1.png" width="100" height="42">  </label> </td >
+             <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label> <td style="padding-left: 10%;"><input type="text"  oninput="myFunction1()" id="one" /></td>
+           <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                         <td style="padding-left: 10%;"><input class="form-control" type="text"  id="on" value={{sevend}} aria-label="Search" disabled>
+       </tr>
+
+     <br>
+
+
+   </table>      <div class="modal-footer">
+           <button  id="sl1" class="btn btn-lg btn-outline-primary"  style="width:25%;" type="button"   type="submit" value="submit" (click)="display()" onclick="document.getElementById('calculate').style.display='block'">Calculate</button>
+                        </div>
+
+</form>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="bg">
+  <!--  &nbsp;&nbsp;&nbsp; <p align="center" style="color:blue;">{{employeename}}</p>
+-->
+
+
+<div id="mydiv2">
+<!--
+  <form  #sata = "ngForm"  (ngSubmit) = "shift(sata.value)">
+
+
+
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="float: left" class="col-50">
+
+<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="color:blue;">{{st}}</p>
+
+</form>
+--></div>
+
+<div id="mydiv" style="display: none;" align="center">
+<button onclick="    document.getElementById('lk').style.display='inline-block	'"  class="collapsible"id="s" style="float: center;width:auto;"  type="button" name="Click"  (click)="onClick()">END SHIFT</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div id="lk" class="modal">
+<button  id="l" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">View  Orders Details
+  <div class="imgcontainer">
+
+  <span onclick="document.getElementById('lk').style.display='none'" class="close" title="Close Modal">&times;</span>
+  </div></button>
+
+</div>
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+      <table  >
+        <thead>
+          <th>Order Id</th>&nbsp;&nbsp;
+        <th> Amount </th>&nbsp;&nbsp;
+        <th> Employee Id</th>&nbsp;&nbsp;
+        <th> Time</th>&nbsp;&nbsp;
+
+
+        </thead>
+
+      </table>
+    </form>
+  </div>
+
+</div>
+<div id="details" class="modal ">
+  <div class="modal-content">
+      <div style=" background-color:#275261!important "class="modal-header  justify-content-between align-items-center">
+        <span onclick="document.getElementById('details').style.display='none'" class="close" title="Close Modal" #details>&times;</span>
+        <div class="">
+
+
+
+          <a href="" id="modal-header" class="white-text mx-3" style="text-align:center;color:white"> Cash Details</a>
+
+
+
+        </div>      </div>
+      <div class="modal-body">
+
+          <div class="imgcontainer">
+          </div>
+          <table  background=""style=" solid black; ">
+              <tr>
+              <tr>
+                  <td>
+                    <label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_100+(2).png" width="100" height="42"></label> </td >
+                    <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label><td style="padding-left: 10%;"> <input type="text" oninput="myFunction100()" id="oneh" /> </td><label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                  <td style="padding-left: 10%;"><input class="form-control" id="o" type="text" value=0 aria-label="Search" disabled>
+                  </td>
+                </tr>
+              <tr>
+                  <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_50.png" width="100" height="42">
+                   </label> </td > <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>
+                     <td style="padding-left: 10%;">
+                    <input type="text" oninput="myFunction50()" id="fifty" /></td>
+                  <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                <td style="padding-left: 10%;"><input class="form-control" type="text" id="f" value={{twod}} aria-label="Search" disabled>
+              </tr>
+              <tr>
+                  <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_20.png" width="100" height="42"> </label>
+                  </td > <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>
+                      <td style="padding-left: 10%;"><input type="text" oninput="myFunction20()" id="twenty" /></td>
+                  <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                <td style="padding-left: 10%;"><input class="form-control"  id="t" type="text" value={{threed}} aria-label="Search" disabled>
+              </tr>
+              <tr>
+                  <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_10.png" width="100" height="42"></label> </td >
+                    <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>  <td style="padding-left: 10%;"><input type="text" oninput="myFunction10()" id="ten" /></td>
+                  <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                <td style="padding-left: 10%;"><input class="form-control" type="text" id="te"  value={{fourd}} aria-label="Search" disabled>
+              </tr>
+              <tr>
+                  <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_5.png" width="100" height="42"></label> </td >
+                    <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>  <td style="padding-left: 10%;"><input type="text" oninput="myFunction5()" id="five" /></td>
+                  <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                <td style="padding-left: 10%;"><input class="form-control" type="text"  id="ff" value={{fived}} aria-label="Search" disabled >
+              </tr>
+              <tr>
+                  <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_2.png" width="100" height="42"> </label> </td >
+                    <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label>  <td style="padding-left: 10%;"><input type="text" oninput="myFunction2()" id="two" /></td>
+                  <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                <td style="padding-left: 10%;"><input class="form-control" type="text" id="tw" value={{sixd}} aria-label="Search" disabled>
+              </tr>
+              <tr>
+                  <td><label style="font-size:4em"><img src="https://s3.ap-south-1.amazonaws.com/imageuplaoding/_1.png" width="100" height="42">  </label> </td >
+                    <label style="margin-top:100%;">&nbsp;&nbsp;&nbsp; X</label> <td style="padding-left: 10%;"><input type="text"  oninput="myFunction1()" id="one" /></td>
+                  <label style="margin-top:200% ;margin-left:150%;"> =</label>
+                                <td style="padding-left: 10%;"><input class="form-control" type="text"  id="on" value={{sevend}} aria-label="Search" disabled>
+              </tr>
+
+            <br>
+
+
+          </table>
+
+      </div>
+      <div class="modal-footer">
+        <button  id="sl1" class="btn btn-lg btn-outline-primary"  style="width:25%;" type="button"   type="submit" value="submit" (click)="display()" onclick="document.getElementById('calculate').style.display='block'">Calculate</button>
+                     </div>
+    </div>
+
+</div>
+<!--================================================================================-->
+
+
+
+<div id="Expensess" class="modal ">
+  <div class="modal-content modal-lg">
+      <div style=" background-color:#275261!important "class="modal-header  justify-content-between align-items-center">
+        <span onclick="document.getElementById('Expensess').style.display='none'" class="close" title="Close Modal" #closeexpense>&times;</span>
+        <div class="">
+
+
+
+          <a href="" id="modal-header" class="white-text mx-3" style="text-align:center;color:white"> Expencess </a>
+
+
+
+        </div>      </div>
+      <div class="modal-body justify-content-center">
+
+          <div class="imgcontainer">
+          </div>
+      <h1 style="text-align:center;font-size:1.5em;font-weight:bold">  Do You Have any Expensess.?
+</h1>
+
+      </div>
+      <div class="modal-footer justify-content-center">
+<button type="button"  style="margin-top:2%" class="btn expencess-btn btn-outline-primary waves-effect"
+ onclick="document.getElementById('Expensess-details').style.display='block'" (click)="closeexprensess()">Yes</button>
+
+<button type="button" style="margin-top:2%;" id="no" class="btn  expencess-btn btn-outline-danger waves-effect"
+ (click)="closeexprensess()" onclick="document.getElementById('details').style.display='block'" >No</button>
+      </div>
+    </div>
+
+</div>
+
+<!--================================================================================-->
+<div id="Expensess-details" class="modal ">
+  <div class="modal-content modal-lg">
+      <div style=" background-color:#275261!important "class="modal-header  justify-content-between align-items-center">
+        <span onclick="document.getElementById('Expensess-details').style.display='none'" class="close" title="Close Modal" #closeexpdetail>&times;</span>
+        <div class="">
+
+
+
+          <a href="" id="modal-header" class="white-text mx-3" style="text-align:center;color:white"> Expencess Details</a>
+
+
+
+        </div>      </div>
+      <div class="modal-body justify-content-center">
+
+          <div class="imgcontainer">
+          </div>
+      <h1 style="text-align:center;font-size:1.5em;font-weight:bold">
+            <div class="row">
+                   <div class="col-50">
+                   </div>
+                   <div class="col-50">
+                        </div>
+                 </div>
+
+                 <form class="" action="/action_page.php">
+<div class="row">
+  <div class="col-25">
+                   <label for="expyear" style="font-weight:bolder;" >Expenses:</label>
+                   <input type="text" style="" onsubmit="onSubmit(Data.value)"placeholder="$ ↵" name="exp" id="abc" ngModel/>
+</div>
+  <div class="col-75">
+                   <label for="cvv" style="font-weight:bolder;"> Expenses Description</label>
+                  <input type="text" placeholder=" (Mandatory)" name="reson" id="abcdefg" ngModel/>
+
+
+</div></div>
+                 </form>
+</h1>
+
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn  expencess-btn btn-outline-success waves-effect"
+         (click)="closing()"onclick="document.getElementById('details').style.display='block'" >Save & Close</button>
+
+      </div>
+    </div>
+
+</div>
+
+
+<!--================================================================================-->
+
+
+
+
+
+
+<div id="calculate" class="modal ">
+  <div class="modal-content modal-lg">
+      <div style=" background-color:#275261!important "class="modal-header  justify-content-between align-items-center">
+        <span onclick="document.getElementById('calculate').style.display='none'" class="close" title="Close Modal" #amountmodal>&times;</span>
+        <div class="">
+
+
+
+          <a href="" id="modal-header" class="white-text mx-3" style="text-align:center;color:white"> Amount Details</a>
+
+
+
+        </div>      </div>
+      <div class="modal-body justify-content-center" id="rd">
+
+          <div class="imgcontainer">
+          </div>
+      <h1 style="text-align:center;font-size:1.5em;font-weight:bold">
+        <div class="row">
+        <div class="col-25">
+          <label for="fname"> Calculated Amount </label>
+        </div>
+        <div class="col-25">
+<label> {{this.xxx}}</label>        </div>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname"  > Sale Amount </label>
+      </div>
+      <div class="col-25">
+<label> {{this.cu}}</label>        </div>
+    </div>  <div class="row">
+      <div class="col-25">
+        <label for="fname"> Variance Amount </label>
+      </div>
+      <div class="col-25">
+<label> {{this.variance}}</label>        </div>
+    </div>
+</h1>
+
+      </div>
+      <div class="modal-footer justify-content-center" >
+<button type="button"   style="margin-top:2%" class="btn expencess-btn btn-outline-danger waves-effect"
+ onclick="document.getElementById('calculate').style.display='none'"  (click)="onSubmit()" >End Shift</button>
+
+<button type="button"  id="no" class="btn  expencess-btn btn-outline-warning waves-effect"
+ (click)="closemodal()"  >close</button>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="id" class="modal "   tabindex="-1" role="dialog" aria-labelledby="largeModal">
+  <div class="modal-content modal-lg">
+      <div style=" background-color:#275261!important "class="modal-header  justify-content-between align-items-center">
+        <span onclick="document.getElementById('id').style.display='none'" class="close" title="Close Modal" #closeviewlog >&times;</span>
+        <div class="">
+
+
+
+          <a href="" id="modal-header" class="white-text mx-3" style="text-align:center;color:white"> Log History  </a>
+
+
+
+        </div>      </div>
+        <div class="modal-body" id="sw">
+            <p align="left"> Name:{{name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:{{email}}</p>&nbsp;&nbsp;
+                <p align="right"></p>&nbsp;&nbsp;
+
+            <table  id="customers"class="responstable" width="100%" id="m2"  style=" ">
+              <thead class="black table-header white-text" >
+
+
+
+              <th> Cash-In</th>
+
+              <th> Sales AMOUNT</th>
+              <th> Total AMOUNT </th>
+              <th>  Start Time </th>
+              <th> End Time </th>
+              <th> Expenses Amount</th>
+              <th> Expenses Description  </th>
+              </thead>
+              <tbody>
+            <tr  width="70%" *ngFor="let s of sdef">
+
+
+
+            <td>${{s.cashin}}</td>
+            <td>${{s.salesamount}}</td>
+            <td>${{s.totalamount}}</td>
+<td>{{s.shiftstartingtime}}</td>
+<td>{{s.shiftendtime}}</td>
+<td >${{s.exp}}</td>
+<td>{{s.resonforexpenses}}</td>
+
+                </tbody>
+            </table>
+
+               </div>
+      <div class="modal-footer justify-content-center">
+
+<button type="button"  id="no" class="btn  expencess-btn btn-outline-warning waves-effect"
+ (click)="closinglog()"  >close</button>
+      </div>
+    </div>
+
+</div>
+
+
+
+</div>
