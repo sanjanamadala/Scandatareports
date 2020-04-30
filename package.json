@@ -25,7 +25,7 @@
     "core-js": "^2.5.4",
     "file-saver": "^2.0.1",
     "fs": "0.0.1-security",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "ng-flash-messages": "^0.3.0",
     "ngx-filesaver": "^2.2.1",
     "popper.js": "^1.14.5",
